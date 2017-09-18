@@ -20,14 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
+Route::get('home_page_info', 'HomeController@index');
 
-Route::get('lesson', function() {
-   return Lesson::all();
-});
-
-Route::get('lesson/{id}', function($id) {
-    return Lesson::find($id);
-});
 
 Route::get('users', 'UserController@index');
 
