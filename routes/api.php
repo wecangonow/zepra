@@ -20,7 +20,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('home_page_info', 'HomeController@index');
+Route::get('home/recommend_games', 'HomeController@recommend_games');
+Route::get('home/recommend_videos', 'HomeController@recommend_videos');
+Route::post('home/installed_list', 'HomeController@installed_list');
+Route::get('tags', 'TagController@index');
 
 
 Route::get('users', 'UserController@index');

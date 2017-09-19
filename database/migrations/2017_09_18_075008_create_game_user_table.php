@@ -18,6 +18,7 @@ class CreateGameUserTable extends Migration
             $table->integer('game_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
             $table->integer('play_time');
+            $table->integer('last_rum_time');
             $table->boolean('installed');
             $table->boolean('viewed');
             $table->timestamps();

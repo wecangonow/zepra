@@ -16,6 +16,9 @@ class CreateGamesTable extends Migration
         Schema::create('games', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('bundle_identifier');
+            $table->float('stars');
+            $table->string('corner_image');
             $table->text('description');
             $table->string('logo');
             $table->string('android_download_url');
